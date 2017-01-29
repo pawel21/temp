@@ -36,5 +36,11 @@ plt.grid(True)
 
 ax1 = plt.subplot(122)
 ax1.plot(E, fermi_10, label="10\,K", linewidth=2)
-
+ax1.plot(E, fermi_300, label="300\,K", linewidth=2)
+ax1.plot(E, fermi_450, label="450\,K", linewidth=2)
+ax1.set_ylabel("prawdopodobieństwa ")
+ax1.set_xlabel("energia [eV]")
+ax1.set_ylim([-0.1, 1.1])
+ax1.text(0.55, 0.6, r"$f(E) = \frac{1}{1 + \exp(\frac{E-E_f}{kT})}$")
+plt.grid(True)
 plt.show()
